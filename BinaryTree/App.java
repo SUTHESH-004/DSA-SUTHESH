@@ -1,3 +1,4 @@
+package BinaryTree;
 public class App {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree(0);

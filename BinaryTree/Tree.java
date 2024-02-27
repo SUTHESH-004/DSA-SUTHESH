@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import javax.lang.model.util.ElementScanner14;
+
 public class Tree {
     private class Node {
         int val;
@@ -44,6 +46,25 @@ public class Tree {
 
     }
     
+    public boolean find(int value)
+    {
+        var current = root;
+        while(current !=null)
+        {
+            if (value>current.val)
+            {
+                current = current.rightchild;
+            }
+            else if(value<current.val)
+            {
+                current = current.leftchild;
+            }
+            else{
+                return true;
+        }
+        
+    }
+    return false;
 
-
+    }
 }

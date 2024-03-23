@@ -12,7 +12,6 @@ class Node
 		next = null;
 	}
 }
-
 public class LinkedList
 {
 	Node head; // head of linked list

@@ -1,54 +1,54 @@
-package BinaryTreePortal;
+// package BinaryTreePortal;
 
-import java.util.*;
+// import java.util.*;
 
-class Node
-{
-    int data;
-    Node left, right;
+// class Node
+// {
+//     int data;
+//     Node left, right;
  
-    Node(int key)
-    {
-        data = key;
-        left = right = null;
-    }
-}
+//     Node(int key)
+//     {
+//         data = key;
+//         left = right = null;
+//     }
+// }
  
-class prog
-{
-    static Node root;
+// class prog
+// {
+//     static Node root;
     
-    public static void display(Node node)
-    {
-        if (node == null) 
-            return;
+//     public static void display(Node node)
+//     {
+//         if (node == null) 
+//             return;
  
-        display(node.left);
-        display(node.right);
-        System.out.print(node.data + " ");
+//         display(node.left);
+//         display(node.right);
+//         System.out.print(node.data + " ");
         
-    }
+//     }
  
-    public static Node insert(Node node, int key)
-    {
+//     public static Node insert(Node node, int key)
+//     {
         
-        //type code here..
+//         //type code here..
         
-        return node;
-    }
+//         return node;
+//     }
     
-    public static void main(String[] args)
-    {
-        int n;
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
+//     public static void main(String[] args)
+//     {
+//         int n;
+//         Scanner sc = new Scanner(System.in);
+//         n = sc.nextInt();
     
-        root = insert(null,sc.nextInt());
+//         root = insert(null,sc.nextInt());
                
-        for(int i=0;i<n-1;++i)
-            insert(root,sc.nextInt());
+//         for(int i=0;i<n-1;++i)
+//             insert(root,sc.nextInt());
             
-        display(root);
-    }
-}
+//         display(root);
+//     }
+// }
 

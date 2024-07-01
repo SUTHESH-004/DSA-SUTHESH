@@ -12,7 +12,6 @@ public class DirectedGraph {
             this.n = n;
         }
     }
-
     public void addNode(int n)
     {
         Node newNode = new Node(n);
@@ -80,8 +79,8 @@ public class DirectedGraph {
         }
     }
 
-    public static void dfs(int n)
-    {
+    // public static void dfs(int n)
+    // {
         
-    }
+    // }
 }

@@ -15,8 +15,7 @@ public class Main {
         g.addNode("B");
         g.addNode("C");
         g.addNode("D");
-        g.addNode("E");
-        g.addEdge("A", "B");
+        g.addNode("E");        g.addEdge("A", "B");
         g.addEdge("B", "C");
         g.addEdge("C", "D");
         g.addEdge("B", "D");

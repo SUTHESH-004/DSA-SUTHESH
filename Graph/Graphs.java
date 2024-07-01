@@ -2,11 +2,10 @@ package Graph;
 
 import java.util.*;
 
-
 // import java.util.
 public class Graphs {
-    private class Node {
-        private String label;
+    private static class Node {
+        private final String label;
 
         public Node(String label) {
             this.label = label;
@@ -17,16 +16,14 @@ public class Graphs {
             return this.label;
         }
     }
-
-    private Map<String, Node> nodes = new HashMap<String, Node>();
+    private final Map<String, Node> nodes = new HashMap<>();
     // for storing the nodes in the graph
-    private Map<Node, ArrayList<Node>> adjacencyList = new HashMap<Node, ArrayList<Node>>();
+    private final Map<Node, ArrayList<Node>> adjacencyList = new HashMap<>();
 
     public void addNode(String label) {
         var node = new Node(label);
         nodes.putIfAbsent(label, node);
         adjacencyList.putIfAbsent(node, new ArrayList<>());
-
     }
 
     public void addEdge(String from, String to) {
@@ -66,11 +63,9 @@ public class Graphs {
                 DepthFirstSearch(node, visited);
         }
     }
-
     public void BreadthFirstSearch(String label) {
-        if (label == null) {
+        if (label == null)
             return;
-        }
         BreadthFirstSearch(nodes.get(label));
     }
 
@@ -80,9 +75,8 @@ public class Graphs {
         queue.add(root);
         while (!queue.isEmpty()) {
             Node current = queue.remove();
-            if (visited.contains(current)) {
+            if (visited.contains(current))
                 continue;
-            }
             System.out.println(current);
             visited.add(current);
             for (Node neighbour : adjacencyList.get(current)) {
@@ -92,16 +86,8 @@ public class Graphs {
             }
         }
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Graphs g = new Graphs();
-        // g.addNode("Suthesh");
-        // g.addNode("Sarath");
-
-        // g.addNode("Santhosh");
-        // g.addNode("Velliangiri");
-        // g.addEdge("Suthesh", "Santhosh");
-        // g.addEdge("Sarath", "Santhosh");
-        // g.addEdge("Velliangiri", "Suthesh");
         g.addNode("A");
         g.addNode("B");
         g.addNode("C");
@@ -115,10 +101,6 @@ public class Graphs {
         // g.DepthFirstSearch("A");
         g.BreadthFirstSearch("A");
 
-        // g.print();
-        // System.out.println();
-        // g.print();
-
     }
-    
+
 }

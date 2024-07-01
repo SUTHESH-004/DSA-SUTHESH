@@ -89,9 +89,8 @@ public class Graph2 {
             }
         }
     }
-
     public static void main(String[] args) {
-        Graphs g = new Graphs();
+        Graph2 g = new Graph2();
         g.addNode("A");
         g.addNode("B");
         g.addNode("C");

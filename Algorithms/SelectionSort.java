@@ -1,4 +1,4 @@
-package Algorithms;
+// package Algorithms;
 
 import java.util.*;
 
@@ -7,7 +7,6 @@ public class SelectionSort {
     // space Complexity O(1)
     public static void main(String[] args) {
         int arr[] = { 5, 6, 7, 8, 9, 2, 3, 5 };
-
         for (int i = 0; i < arr.length; i++) {
             int min = i;
             for (int j = i; j < arr.length; j++) {
@@ -19,6 +18,5 @@ public class SelectionSort {
             arr[min] = temp;
         }
         System.out.println(Arrays.toString(arr));
-
     }
 }

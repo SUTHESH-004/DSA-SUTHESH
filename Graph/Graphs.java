@@ -10,12 +10,13 @@ public class Graphs {
         public Node(String label) {
             this.label = label;
         }
-
+        
         @Override
         public String toString() {
             return this.label;
         }
     }
+
     private final Map<String, Node> nodes = new HashMap<>();
     // for storing the nodes in the graph
     private final Map<Node, ArrayList<Node>> adjacencyList = new HashMap<>();
@@ -63,6 +64,7 @@ public class Graphs {
                 DepthFirstSearch(node, visited);
         }
     }
+
     public void BreadthFirstSearch(String label) {
         if (label == null)
             return;
@@ -86,6 +88,7 @@ public class Graphs {
             }
         }
     }
+
     public static void main(String[] args) {
         Graphs g = new Graphs();
         g.addNode("A");
